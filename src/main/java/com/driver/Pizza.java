@@ -17,11 +17,11 @@ public class Pizza {
         if(isVeg){
             this.ToppingPrice=70;
             price+=300;
-            bill+="Base Price Of The Pizza: 300\n";
+            bill="Base Price Of The Pizza: 300\n";
         }else {
             this.ToppingPrice=120;
             price+=400;
-            bill+="Base Price Of The Pizza: 400\n";
+            bill="Base Price Of The Pizza: 400\n";
         }
 
         // your code goes here
