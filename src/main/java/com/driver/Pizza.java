@@ -3,7 +3,7 @@ package com.driver;
 public class Pizza {
 
     public int ToppingPrice;
-
+    public boolean billFlag=true;
     public boolean toppingFlag=true;
     public int paperBagPrice=0;
     public boolean extraCheeseFlag=true;
@@ -59,7 +59,12 @@ public class Pizza {
     }
 
     public String getBill(){
-        if(!extraCheeseFlag)
+        if(!billFlag)
+        {
+            return this.bill;
+        }
+
+            if(!extraCheeseFlag)
         {
             bill += "Extra Cheese Added: 80" + "\n";
         }
@@ -73,9 +78,8 @@ public class Pizza {
         {
             bill += "Paperbag Added: " + paperBagPrice + "\n";
         }
-
         bill += "Total Price: " + price + "\n";
-
+        billFlag=false;
         return this.bill;
     }
 }
